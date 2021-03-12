@@ -11,8 +11,7 @@ public class Task {
     public void setName(String name){
         this.name = name;
     }
-    public void setDeadline(int year, int month, int day){
-        deadline = LocalDate.of(year, month, day);
+    public void setDeadline(LocalDate deadline){
         this.deadline = deadline;
     }
     public String getName(){
@@ -26,7 +25,5 @@ public class Task {
             return name;
         else
             return name + ", deadline: " + deadline;
-    }
-    public void display(){
     }
 }

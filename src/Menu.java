@@ -1,14 +1,13 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Scanner;
 
 
 public class Menu {
 
     public static void main(String[] args) {
-
-        TodoList list1 = new TodoList("Morning");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter list name: ");
+        String listName = sc.nextLine();
+        TodoList list1 = new TodoList(listName);
         list1.createTask();
         list1.createTask();
         list1.displayList();
